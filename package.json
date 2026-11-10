@@ -1,0 +1,55 @@
+{
+    "name": "testar-state-model-asm-playwright",
+    "version": "0.3.0",
+    "description": "Playwright exploration using TESTAR state models",
+    "type": "module",
+    "license": "BSD-3-Clause",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "docs",
+        "README.md",
+        "TODO.md",
+        "benchmarks",
+        "examples",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc -p tsconfig.json && node tools/copy-resources.ts",
+        "prepare": "npm run build",
+        "typecheck": "tsc -p tsconfig.test.json",
+        "test": "vitest run",
+        "check": "npm run typecheck && npm test",
+        "benchmark": "npm run build && node benchmarks/benchmark-exploration.ts",
+        "example": "npm run build && node examples/local-exploration.ts"
+    },
+    "dependencies": {
+        "testar-state-model-asm": "github:ferpasri/testar-state-model-asm-typescript#v0.3.0",
+        "testar-evidence-playwright": "github:ferpasri/testar-evidence-playwright-typescript-adapter#v0.3.0",
+        "testar-abstraction": "github:ferpasri/testar-abstraction-typescript#v0.3.3",
+        "testar-evidence": "github:ferpasri/testar-evidence-typescript#v0.3.0"
+    },
+    "peerDependencies": {
+        "playwright": "^1.65.0"
+    },
+    "devDependencies": {
+        "playwright": "1.65.0",
+        "typescript": "7.0.2",
+        "@types/node": "26.6.6",
+        "vitest": "5.1.0"
+    },
+    "engines": {
+        "node": ">=24"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ferpasri/testar-state-model-asm-playwright-typescript.git"
+    }
+}
