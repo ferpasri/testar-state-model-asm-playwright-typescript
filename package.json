@@ -31,7 +31,7 @@
         "example": "npm run build && node examples/local-exploration.ts"
     },
     "dependencies": {
-        "testar-state-model-asm": "github:ferpasri/testar-state-model-asm-typescript#v0.3.0",
+        "testar-state-model-asm": "github:ferpasri/testar-state-model-asm-typescript#v0.3.1",
         "testar-evidence-playwright": "github:ferpasri/testar-evidence-playwright-typescript-adapter#v0.3.0",
         "testar-abstraction": "github:ferpasri/testar-abstraction-typescript#v0.3.3",
         "testar-evidence": "github:ferpasri/testar-evidence-typescript#v0.3.0"
